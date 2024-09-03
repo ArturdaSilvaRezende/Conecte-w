@@ -1,0 +1,343 @@
+.login__container {
+  @apply flex;
+  grid-area: main;
+
+  img {
+    height: 70vh;
+    width: 40%;
+  }
+
+  .login__contents {
+    @apply ml-32 pr-6 -mt-1.5 relative;
+    border-left: 1px solid var(--color-red-rgba);
+    border-bottom: 1px solid var(--color-red-rgba);
+    height: 375px;
+
+    &::after {
+      @apply ml-auto block relative text-transparent;
+      content: ".";
+      border-right: 1px solid var(--color-red-rgba);
+      height: 45px;
+      right: -24px;
+      top: -13px;
+    }
+
+    .login__title {
+      @apply mt-20 ml-6;
+
+      h1 {
+        font-family: "Kanit", sans-serif;
+        @apply font-bold text-4xl;
+
+        span {
+          &:first-child {
+            @apply text-4xl;
+          }
+
+          &:last-child {
+            @apply text-2xl font-normal;
+            color: var(--color-gray-very-light);
+          }
+        }
+      }
+
+      p {
+        @apply uppercase;
+        color: var(--color-gray-light);
+
+        &:nth-child(3) {
+          @apply font-bold;
+        }
+      }
+    }
+
+    .login__form {
+      @apply ml-6 mt-2;
+
+      .login__fields {
+        .login__input {
+          @apply flex items-center;
+          border: 1px solid var(--bg-color-gray-light);
+          border-radius: 5px;
+
+          & + .login__input {
+            @apply mt-2;
+          }
+
+          input {
+            @apply py-1 pl-3;
+          }
+
+          button {
+            @apply py-2 px-3;
+            background-color: var(--bg-color-gray-light);
+            border-radius: 5px 0 0 5px;
+
+            svg {
+              color: var(--color-black);
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+
+      .login__submit {
+        @apply flex justify-between items-center mt-4;
+
+        button {
+          &:first-child {
+            @apply transition-all ease-in;
+            color: var(--color-blue-light);
+            border-bottom: 1px solid var(--color-blue-light);
+            font-size: 14px;
+
+            &:hover {
+              color: var(--color-blue-primary);
+              border-bottom: 1px solid var(--color-blue-light);
+              opacity: 0.9;
+            }
+          }
+
+          &:last-child {
+            @apply p-1 w-20 text-white ease-in transition-all;
+            background-color: var(--color-blue-light);
+            border: 1px solid var(--color-blue-primary);
+            border-radius: 4px;
+
+            &:hover {
+              background-color: var(--color-blue-primary);
+            }
+          }
+        }
+      }
+    }
+
+    .point__left {
+      @apply absolute;
+      left: -32px;
+      bottom: -17px;
+
+      &::after {
+        @apply ml-auto block relative text-transparent rounded-full bg-white;
+        content: ".";
+        border: 2px solid var(--color-red-rgba);
+        height: 16px;
+        width: 16px;
+        right: -24px;
+        top: -10px;
+      }
+    }
+
+    .point__right {
+      @apply absolute;
+      right: 15px;
+      bottom: -17px;
+
+      &::after {
+        @apply ml-auto block relative text-transparent rounded-full bg-white z-10;
+        content: ".";
+
+        border: 2px solid var(--color-red-rgba);
+        height: 16px;
+        width: 16px;
+        right: -22px;
+        top: -10px;
+      }
+    }
+
+    .point__top {
+      @apply absolute;
+      right: 15px;
+      bottom: 39px;
+
+      &::after {
+        @apply ml-auto block relative text-transparent rounded-full z-10;
+        content: ".";
+        background-color: var(--color-red-dark);
+        height: 16px;
+        width: 16px;
+        right: -22px;
+        top: -1px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @apply absolute top-1/2 left-1/2;
+    transform: translate(-50%, -50%);
+
+    img {
+      @apply hidden;
+    }
+
+    .login__contents {
+      @apply ml-0 bg-red-400;
+
+      box-shadow: 5px 5px 10px #333333, -5px -5px 10px #333333;
+      border-radius: 10px;
+      border-left: none;
+      border-bottom: none;
+      min-width: 500px;
+
+      &::after {
+        @apply hidden;
+      }
+
+      .login__title,
+      .login__form {
+        @apply ml-0 pl-5;
+      }
+
+      .login__title {
+        @apply mt-3;
+
+        h1 {
+          text-shadow: 3px 3px 5px #333333;
+
+          span {
+            &:first-child {
+              @apply text-5xl text-white;
+            }
+            &:last-child {
+              @apply ml-0.5 text-2xl text-white;
+            }
+          }
+        }
+
+        p {
+          @apply text-white;
+          text-shadow: 1px 1px 5px #333333;
+
+          &:nth-child(2) {
+            @apply my-1;
+            font-size: 1.1rem;
+          }
+
+          &:nth-child(3) {
+            @apply font-semibold;
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .login__form {
+        .login__fields {
+          .login__input {
+            @apply flex;
+
+            & + .login__input {
+              @apply mt-3;
+            }
+
+            button {
+              @apply py-3;
+            }
+
+            input {
+              @apply w-full py-2;
+            }
+          }
+        }
+
+        .login__submit {
+          button {
+            &:first-child {
+              @apply text-white;
+              border-bottom: 1px solid #fff;
+
+              &:hover {
+                @apply text-white;
+                border-bottom: 1px solid #fff;
+                opacity: 0.7;
+              }
+            }
+
+            &:last-child {
+              background-color: var(--bg-color-header-dark);
+              border: 1px solid var(--bg-color-header-dark);
+
+              &:hover {
+                background-color: var(--bg-color-header-dark);
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+
+      .point__left,
+      .point__right,
+      .point__top {
+        @apply hidden;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    @apply flex-col justify-center items-center mb-44;
+
+    img {
+      @apply object-cover;
+      height: 50vh;
+      width: 100%;
+    }
+
+    .login__contents {
+      @apply ml-0 pr-0 mb-10 mt-3 w-11/12;
+      border-left: none;
+      border-bottom: none;
+      height: auto;
+
+      &::after {
+        @apply hidden;
+      }
+
+      .login__title,
+      .login__form {
+        @apply ml-0;
+      }
+
+      .login__title {
+        @apply mt-0 mb-5 text-center;
+
+        h1 {
+          span {
+            &:first-child {
+              @apply text-4xl;
+            }
+          }
+        }
+
+        p {
+          &:nth-child(2) {
+            @apply mt-2;
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .login__form {
+        .login__fields {
+          .login__input {
+            @apply p-2;
+
+            & + .login__input {
+              @apply mt-3;
+            }
+
+            input {
+              @apply w-full;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .point__left,
+      .point__right,
+      .point__top {
+        @apply hidden;
+      }
+    }
+  }
+}

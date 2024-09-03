@@ -1,0 +1,26 @@
+.breadcrumbArea {
+  @apply py-5 max-[767px]:px-5;
+  background-color: var(--bg-color-header-gray);
+  border-bottom: 1px solid var(--border-gray-light);
+
+  h1,
+  h2 {
+    @apply text-2xl font-medium;
+    color: #333333;
+  }
+
+  .breadcrumbArea__container {
+    @apply mx-auto;
+    max-width: 1000px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    @apply pl-5;
+  }
+
+  @media screen and (max-width: 767px) {
+    h1 {
+      @apply text-xl;
+    }
+  }
+}

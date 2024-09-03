@@ -1,8 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 
+//styles
+import "@/styles/globals.css";
+
+//fonts
+import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
+
+//swiper
+import { register } from "swiper/element/bundle";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+register();
 
 export const metadata: Metadata = {
   title: "Create Next App",

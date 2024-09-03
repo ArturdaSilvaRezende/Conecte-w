@@ -1,0 +1,16 @@
+.login {
+  display: grid;
+  grid-template-rows: 1fr minmax(300px, 90vh) 1fr;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  height: 100vh;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    background: url("/assets/images/login/login-img-bg.png") no-repeat;
+    background-size: contain;
+    background-position: center 20px;
+    height: 100vh;
+  }
+}

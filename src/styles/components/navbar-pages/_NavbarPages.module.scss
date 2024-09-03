@@ -1,0 +1,95 @@
+.navbar {
+  @apply flex pl-3;
+  background-image: linear-gradient(
+    to top,
+    #cdcdcd,
+    #d9d9d9,
+    #e6e6e6,
+    #f2f2f2,
+    #ffffff
+  );
+  border-bottom: 1px solid #bbbbbb;
+
+  .navbar__sessionBox {
+    @apply flex justify-between;
+
+    .navbar__sessionName {
+      @apply flex items-center w-24;
+
+      svg {
+        @apply text-2xl text-red-600;
+      }
+
+      p {
+        @apply ml-2 text-gray-700;
+      }
+    }
+
+    .navbar__handleMenu {
+      @apply hidden;
+    }
+  }
+
+  .navbar__container {
+    ul {
+      @apply flex items-center;
+
+      li {
+        @apply py-4 px-3 font-medium text-gray-500;
+        border-left: 1px solid #b8b9bd;
+        font-size: 12px;
+
+        &:first-child {
+          @apply text-black ml-2;
+          font-size: 18px;
+        }
+
+        &:last-child {
+          border-right: 1px solid #b8b9bd;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 993px) and (max-width: 1024px) {
+    .navbar__container {
+      ul {
+        li {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    @apply flex-col px-5 pt-5 relative;
+
+    .navbar__container {
+      @apply mb-5;
+
+      ul {
+        @apply flex-col;
+
+        li {
+          border-left: none;
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+
+    .navbar__sessionBox {
+      @apply mb-5;
+
+      .navbar__handleMenu {
+        @apply flex items-center text-gray-600;
+
+        span {
+          @apply mr-2;
+        }
+      }
+    }
+  }
+}

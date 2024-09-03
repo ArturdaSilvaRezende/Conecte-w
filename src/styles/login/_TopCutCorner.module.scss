@@ -1,0 +1,70 @@
+.login__topCutConer {
+  @apply flex mb-4;
+  grid-area: header;
+
+  span {
+    display: block;
+    height: 5px;
+
+    &:nth-child(1) {
+      &::before {
+        @apply block w-40;
+        content: ".";
+        position: relative;
+        top: -24px;
+        left: 0;
+        border-bottom: 15px solid var(--color-red-very-dark);
+        border-right: 30px solid transparent;
+        color: transparent;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        @apply block w-48;
+        content: ".";
+        position: relative;
+        top: 0;
+        left: -31px;
+        border-bottom: 15px solid var(--color-red-dark);
+        border-right: 30px solid transparent;
+        transform: rotate(180deg);
+        color: transparent;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 100%;
+
+      &::before {
+        @apply block;
+        content: ".";
+        position: relative;
+        top: 0;
+        border-bottom: 15px solid var(--color-red-primary);
+        border-right: 30px solid transparent;
+        margin-left: -60px;
+        transform: rotate(180deg);
+        color: transparent;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    span {
+      width: 100%;
+
+      &:nth-child(1) {
+        &::before {
+          @apply block w-32;
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          @apply block w-40;
+        }
+      }
+    }
+  }
+}

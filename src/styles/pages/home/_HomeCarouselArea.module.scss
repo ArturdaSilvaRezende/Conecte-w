@@ -1,0 +1,142 @@
+.home__carouselArea {
+  @apply mx-auto pt-7 flex justify-between items-center flex-wrap;
+  max-width: 1000px;
+
+  .home__brand {
+    @apply bg-white mr-6 relative;
+    border: 1px solid var(--border-gray-light);
+    border-radius: 10px;
+    width: 300px;
+    height: 275px;
+
+    img {
+      @apply w-8/12 h-auto absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+  }
+
+  .home__carousel {
+    @apply w-8/12 relative;
+
+    figure {
+      img {
+        @apply w-auto h-auto block ml-auto;
+        border-radius: 10px;
+        border: 1px solid var(--border-gray-light);
+      }
+    }
+
+    .carousel__buttons {
+      @apply absolute top-1/2  left-0 right-0 -translate-y-1/2 
+        flex justify-between z-20;
+
+      button {
+        @apply bg-white rounded-full text-gray-500;
+        border: 1px solid var(--border-gray-light);
+        height: 50px;
+        width: 50px;
+
+        &:first-child {
+          @apply relative -left-5;
+        }
+
+        &:last-child {
+          @apply relative -right-5;
+        }
+
+        svg {
+          @apply mx-auto text-2xl;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 993px) and (max-width: 1024px) {
+    @apply px-5;
+
+    .home__brand {
+      height: 235px;
+      width: 30%;
+    }
+
+    .home__carousel {
+      @apply w-7/12 relative;
+
+      .carousel__buttons {
+        button {
+          &:first-child {
+            @apply -left-3;
+          }
+
+          &:last-child {
+            @apply -right-3;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    @apply px-5;
+
+    .home__brand {
+      width: 200px;
+      height: 200px;
+    }
+
+    .home__carousel {
+      .carousel__buttons {
+        button {
+          height: 35px;
+          width: 35px;
+
+          &:first-child {
+            @apply -left-3;
+          }
+
+          &:last-child {
+            @apply -right-3;
+          }
+
+          svg {
+            @apply mx-auto text-xl;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .home__brand {
+      @apply hidden;
+    }
+
+    .home__carousel {
+      @apply mx-auto w-11/12;
+
+      .mySwiper {
+        @apply pb-8;
+      }
+
+      .carousel__buttons {
+        top: 40%;
+
+        button {
+          height: 30px;
+          width: 30px;
+
+          &:first-child {
+            @apply -left-2;
+          }
+
+          &:last-child {
+            @apply -right-2;
+          }
+
+          svg {
+            @apply mx-auto text-sm;
+          }
+        }
+      }
+    }
+  }
+}

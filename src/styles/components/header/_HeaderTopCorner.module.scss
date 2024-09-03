@@ -1,0 +1,96 @@
+//mixins
+@mixin topCutConerBg($bg) {
+  content: ".";
+  background-color: $bg;
+  color: transparent;
+  height: 10px;
+}
+
+.header__topCutConer {
+  @apply flex justify-between items-center;
+
+  span {
+    @apply block;
+
+    &:nth-child(1) {
+      width: 739px;
+
+      &::before {
+        @apply block;
+        @include topCutConerBg($bg: var(--color-red-header-top));
+      }
+    }
+
+    &:nth-child(2) {
+      width: 68px;
+
+      &::before {
+        @apply block;
+        @include topCutConerBg($bg: var(--color-red-very-dark));
+      }
+    }
+
+    &:nth-child(3) {
+      width: 576px;
+
+      &::before {
+        @apply block;
+        @include topCutConerBg($bg: var(--color-red-dark-header-top));
+      }
+    }
+  }
+
+  @media screen and (min-width: 993px) and (max-width: 1024px) {
+    span {
+      &:nth-child(1) {
+        min-width: 855px;
+      }
+
+      &:nth-child(2) {
+        width: 48px;
+      }
+
+      &:nth-child(3) {
+        width: 121px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    span {
+      @apply block;
+
+      &:nth-child(1) {
+        min-width: 593px;
+      }
+
+      &:nth-child(2) {
+        max-width: 7.3%;
+      }
+
+      &:nth-child(3) {
+        max-width: 121px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    @apply flex justify-between items-center;
+
+    span {
+      @apply block;
+
+      &:nth-child(1) {
+        @apply w-full;
+      }
+
+      &:nth-child(2) {
+        @apply hidden;
+      }
+
+      &:nth-child(3) {
+        max-width: 122.5px;
+      }
+    }
+  }
+}

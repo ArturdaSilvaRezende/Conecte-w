@@ -1,0 +1,331 @@
+.nova {
+  .nova__breadcrump {
+    @apply flex items-center justify-between;
+
+    .nova__breadcrump__menu {
+      @apply flex items-center;
+
+      ul {
+        @apply flex mr-4 text-gray-500;
+        font-size: 14px;
+
+        li {
+          & + li {
+            @apply ml-2;
+          }
+        }
+      }
+
+      button {
+        @apply flex items-center justify-center w-24 py-1 transition-all ease-in;
+        background-image: linear-gradient(
+          to top,
+          #cdcdcd,
+          #d9d9d9,
+          #e6e6e6,
+          #f2f2f2,
+          #ffffff
+        );
+        border: 1px solid var(--border-gray-dark);
+        border-radius: 5px;
+        font-size: 14px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        span {
+          & + span {
+            @apply ml-1;
+          }
+        }
+      }
+    }
+  }
+
+  .nova__solicitation {
+    @apply mx-auto;
+    max-width: 1000px;
+
+    .nova__solicitation__container {
+      @apply mt-10 mb-20;
+      border: 1px solid var(--border-gray-light);
+      border-radius: 10px;
+
+      .nova__solicitation__container_title {
+        @apply p-4;
+        background-color: var(--bg-color-header-gray);
+        border-bottom: 1px solid var(--border-gray-dark);
+        border-radius: 10px 10px 0 0;
+
+        p {
+          @apply text-xl font-semibold text-gray-700;
+        }
+      }
+
+      .nova__solicitation__container_form {
+        @apply ml-5 mt-7;
+        width: 550px;
+
+        .nova__solicitation__container_formItem {
+          @apply flex items-center justify-between mb-5;
+
+          label {
+            @apply ml-auto mr-6 text-gray-700;
+            font-size: 14px;
+          }
+
+          input,
+          select {
+            @apply pl-3 py-2 outline-none;
+            border: 1px solid var(--border-gray-light);
+            border-radius: 5px;
+            font-size: 12px;
+            width: 450px;
+          }
+        }
+
+        .nova__solicitation__container_formDescription {
+          @apply flex justify-between flex-wrap;
+
+          p {
+            @apply ml-auto mr-4 text-gray-700 flex justify-start flex-col;
+
+            span {
+              &:first-child {
+                @apply font-bold;
+                font-size: 14px;
+              }
+
+              &:last-child {
+                @apply w-20;
+                font-size: 12px;
+              }
+            }
+          }
+
+          .nova__solicitation__container_formDescription__contents {
+            border: 1px solid var(--border-gray-light);
+            width: 450px;
+
+            .formDescription__contents__container {
+              .formDescription__contents__containerHeader {
+                @apply pl-3 py-3;
+                background-color: var(--bg-color-header-gray);
+
+                ul {
+                  li {
+                    @apply flex items-center;
+                    font-size: 12px;
+
+                    & + li {
+                      @apply ml-3;
+                    }
+
+                    span {
+                      &:last-child {
+                        @apply ml-0.5;
+                      }
+                    }
+                  }
+
+                  &:first-child {
+                    @apply flex mb-5;
+                  }
+
+                  &:last-child {
+                    @apply flex;
+                  }
+                }
+
+                .formDescription__contents__containerHeader_fontType {
+                  @apply flex px-2 mx-2;
+                  border-left: 1px solid var(--border-gray-light);
+                  border-right: 1px solid var(--border-gray-light);
+
+                  li {
+                    font-size: 14px;
+                  }
+                }
+
+                .formDescription__contents__containerHeader_fontAlign {
+                  @apply flex pr-2 mr-2;
+                  border-right: 1px solid var(--border-gray-light);
+
+                  li {
+                    font-size: 16px;
+                  }
+                }
+
+                .formDescription__contents__containerHeader_fontIdent {
+                  @apply flex;
+
+                  li {
+                    font-size: 16px;
+
+                    &:nth-child(3) {
+                      font-size: 22px;
+                    }
+
+                    &:nth-child(4) {
+                      font-size: 22px;
+                    }
+                  }
+                }
+              }
+
+              textarea {
+                @apply w-full h-40 px-3 outline-none;
+                resize: none;
+              }
+
+              .formDescription__contents__containerCaracters {
+                @apply py-2 pl-3;
+                border-top: 1px solid var(--border-gray-light);
+                background-color: var(--bg-color-header-gray);
+              }
+            }
+          }
+
+          .nova__solicitation__container_formDescription__totalCaracters {
+            @apply w-full mt-3;
+            margin-left: 100px;
+          }
+        }
+
+        .nova__solicitation__container_formOpenFile {
+          @apply mt-7 flex items-center;
+          margin-left: 100px;
+
+          button {
+            @apply flex items-center justify-center w-32 py-1 transition-all ease-in;
+            background-image: linear-gradient(
+              to top,
+              #cdcdcd,
+              #d9d9d9,
+              #e6e6e6,
+              #f2f2f2,
+              #ffffff
+            );
+            border: 1px solid var(--border-gray-dark);
+            border-radius: 5px;
+            font-size: 12px;
+
+            &:hover {
+              opacity: 0.8;
+            }
+
+            span {
+              & + span {
+                @apply ml-2;
+              }
+            }
+          }
+
+          p {
+            @apply w-9/12 text-gray-600 ml-7;
+            font-size: 12px;
+          }
+        }
+
+        .nova__solicitation__container_formSubmit {
+          @apply text-white p-2 transition-all ease-in mt-10 mb-5 w-20;
+          background-color: var(--color-blue-light);
+          border: 1px solid var(--color-blue-primary);
+          border-radius: 5px;
+          font-size: 12px;
+          margin-left: 100px;
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .nova__breadcrump {
+      .nova__breadcrump__menu {
+        ul {
+          @apply hidden;
+        }
+      }
+    }
+
+    .nova__solicitation {
+      @apply px-2.5;
+
+      .nova__solicitation__container {
+        .nova__solicitation__container_form {
+          @apply w-full px-5 ml-0;
+
+          .nova__solicitation__container_formItem {
+            @apply flex-col;
+
+            label {
+              @apply ml-0 mr-auto mb-3;
+            }
+
+            input,
+            select {
+              @apply w-full py-3;
+            }
+          }
+
+          .nova__solicitation__container_formDescription {
+            p {
+              @apply mr-auto mb-3 ml-0;
+
+              span {
+                &:last-child {
+                  @apply w-40;
+                  font-size: 12px;
+                }
+              }
+            }
+
+            .nova__solicitation__container_formDescription__contents {
+              @apply w-full;
+
+              .formDescription__contents__container {
+                .formDescription__contents__containerHeader {
+                  ul {
+                    &:first-child {
+                      @apply flex mb-5;
+                    }
+
+                    &:last-child {
+                      @apply pb-3 pr-3;
+                      overflow-x: auto;
+                    }
+                  }
+                }
+              }
+            }
+
+            .nova__solicitation__container_formDescription__totalCaracters {
+              @apply ml-0;
+            }
+          }
+
+          .nova__solicitation__container_formOpenFile {
+            @apply ml-0 flex-col justify-start items-start;
+
+            button {
+              @apply mb-3;
+            }
+
+            p {
+              @apply w-full ml-0;
+            }
+          }
+
+          .nova__solicitation__container_formSubmit {
+            @apply ml-0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,231 @@
+.soa {
+  .soa__breadcrumb_area {
+    @apply flex justify-between items-center;
+
+    .soa__breadcrumb_area__solicitation {
+      @apply flex items-center justify-center uppercase text-white p-2 transition-all ease-in;
+      background-color: var(--color-blue-light);
+      border: 1px solid var(--color-blue-primary);
+      border-radius: 5px;
+      font-size: 10.5px;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      span {
+        & + span {
+          @apply ml-1;
+        }
+
+        &:last-child {
+          @apply relative;
+          top: 1.2px;
+        }
+      }
+    }
+  }
+
+  .soa__contents {
+    @apply mx-auto mb-10;
+    max-width: 1000px;
+
+    .soa__actions {
+      @apply text-right py-10 transition-all ease-in;
+
+      button {
+        color: var(--color-blue-light);
+        text-decoration: underline;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        & + button {
+          @apply ml-8;
+        }
+      }
+    }
+
+    .soa__table {
+      @apply w-full;
+      border-top: 1px solid var(--color-red-primary);
+      border-left: 1px solid var(--border-gray-light);
+      border-right: 1px solid var(--border-gray-light);
+
+      thead {
+        tr {
+          th {
+            @apply p-2 text-left;
+            background-image: linear-gradient(
+              to top,
+              #ececec,
+              #f1f1f1,
+              #f5f5f5,
+              #fafafa,
+              #ffffff
+            );
+            border-right: 1px solid var(--border-gray-light);
+            font-size: 12px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            @apply p-2;
+            border: 1px solid var(--border-gray-light);
+          }
+
+          .soa__table__inputs {
+            @apply py-2 px-1;
+            background-image: linear-gradient(
+              to top,
+              #ececec,
+              #f1f1f1,
+              #f5f5f5,
+              #fafafa,
+              #ffffff
+            );
+
+            .soa__table__inputsContens {
+              @apply flex items-center w-full;
+
+              input {
+                @apply w-full ml-1;
+                border: 1px solid var(--border-gray-light);
+              }
+
+              span {
+                @apply pl-0.5 w-5;
+              }
+            }
+          }
+
+          td {
+            span {
+              @apply block w-full;
+
+              svg {
+                @apply mx-auto;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .soa__table__footer {
+      @apply flex justify-between items-center p-3;
+      border: 1px solid var(--border-gray-light);
+      font-size: 12px;
+
+      .soa__table__footer__pagination__refresh {
+        @apply flex items-center;
+
+        button {
+          @apply flex items-center;
+
+          span {
+            @apply ml-2;
+          }
+        }
+      }
+
+      .soa__table__footer__pagination {
+        @apply flex;
+
+        .soa__table__footer__pagination__currentPage {
+          @apply flex px-3 mx-3;
+          border-left: 1px solid var(--border-gray-light);
+          border-right: 1px solid var(--border-gray-light);
+
+          p {
+            &:nth-child(2) {
+              @apply mx-3;
+            }
+          }
+        }
+
+        .soa__table__footer__pagination__btn {
+          @apply flex;
+
+          button {
+            &:last-child {
+              @apply ml-3;
+            }
+          }
+        }
+
+        select {
+          @apply ml-3 cursor-pointer outline-none text-gray-600;
+        }
+      }
+    }
+
+    .soa__table__os {
+      @apply text-gray-600 mt-1;
+      font-size: 14px;
+
+      span {
+        @apply text-red-600;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: 90vh;
+
+    .soa__breadcrumb_area {
+      .soa__breadcrumb_area__solicitation {
+        @apply m-5;
+        width: 140px;
+      }
+    }
+
+    .soa__contents {
+      @apply px-5;
+      overflow-x: auto;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .soa__breadcrumb_area {
+      .soa__breadcrumb_area__solicitation {
+        width: 190px;
+      }
+    }
+
+    .soa__contents {
+      @apply px-5;
+      overflow-x: auto;
+
+      .soa__table {
+        td:last-child {
+          word-break: break-all;
+        }
+
+        tbody {
+          tr {
+            &:first-child {
+              @apply hidden;
+            }
+          }
+        }
+      }
+
+      .soa__table__footer {
+        @apply flex-col mt-4 w-full;
+
+        .soa__table__footer__pagination {
+          @apply my-5;
+        }
+      }
+
+      .soa__table__os {
+        @apply my-3;
+      }
+    }
+  }
+}

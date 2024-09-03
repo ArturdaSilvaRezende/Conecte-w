@@ -1,0 +1,29 @@
+.footer {
+  @apply py-3;
+  border-top: 1px solid var(--bg-color-gray-light);
+  background-color: #f3f1f1;
+  grid-area: footer;
+
+  .footer__container {
+    @apply flex justify-around items-center;
+
+    p {
+      color: var(--color-gray-medium);
+      font-size: 0.8rem;
+
+      span {
+        @apply mr-1;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer__container {
+      @apply flex-col;
+
+      p {
+        @apply w-10/12 mt-3 text-center;
+      }
+    }
+  }
+}

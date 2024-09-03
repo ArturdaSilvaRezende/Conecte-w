@@ -1,0 +1,12 @@
+.home {
+  background: url("/assets/images/home/bg-home-image.png") no-repeat;
+  background-size: 34% auto;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    background-size: 50% auto;
+  }
+
+  @media screen and (max-width: 767px) {
+    background-image: none;
+  }
+}
