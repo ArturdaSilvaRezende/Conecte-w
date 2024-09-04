@@ -3,10 +3,6 @@ import type { Metadata } from "next";
 //styles
 import "@/styles/globals.css";
 
-//fonts
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
-
 //swiper
 import { register } from "swiper/element/bundle";
 import "swiper/css";
@@ -25,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br">
+      <body>{children}</body>
     </html>
   );
 }

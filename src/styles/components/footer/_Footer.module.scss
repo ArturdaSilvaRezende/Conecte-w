@@ -1,11 +1,15 @@
 .footer {
-  @apply py-3;
+  @apply py-1;
   border-top: 1px solid var(--bg-color-gray-light);
   background-color: #f3f1f1;
   grid-area: footer;
 
   .footer__container {
     @apply flex justify-around items-center;
+
+    img {
+      @apply w-48 h-auto block object-cover;
+    }
 
     p {
       color: var(--color-gray-medium);

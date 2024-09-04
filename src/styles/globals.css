@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,8 +11,63 @@ input {
   border-bottom: 3px solid var(--color-red-primary);
 }
 
+body {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+}
+
 :root {
   /* ========== colors global ========== */
+
+  /*blue*/
+  --blue: #0149fd;
+  --blue-rgb: rgb(1, 73, 253);
+  --blue-pantone: #1e22aa;
+
+  /*pale blue*/
+  --pale-blue: #bfcde0;
+  --pale-blue-rgb: rgb(191, 205, 224);
+  --pale-blue-pantone: #c5cfda;
+
+  /*navy*/
+  --navy: #010647;
+  --navy-rgb: rgb(1, 6, 71);
+  --navy-pantone: #141b4d;
+
+  /*ciano*/
+  --ciano: #7fdeff;
+  --ciano-rgb: rgb(127, 222, 255);
+  --ciano-pantone: #74d1ea;
+
+  /*black*/
+  --black: #000000;
+  --black-rgb: rgb(0, 0, 0);
+  --black-pantone: #101820;
+
+  /*dark indigo*/
+  --dark-indigo: #171425;
+  --dark-indigo-rgb: rgb(23, 20, 37);
+  --dark-indigo-pantone: #1c1f2a;
+
+  /*purple*/
+  --purple: #8d14f3;
+  --purple-rgb: rgb(141, 20, 243);
+  --purble-pantone: #5c068c;
+
+  /*gray*/
+  --gray: #7f7f7f;
+  --gray-rgb: rgb(127, 127, 127);
+  --gray-pantone: #8a8d8f;
+
+  /*light green*/
+  --light-green: #affc41;
+  --light-green-rgb: rgb(175, 252, 65);
+  --light-green-pantone: #78be20;
+
+  /*white*/
+  --white: #fefcfd;
+  --white-rgb: rgb(254, 252, 253);
+  --white-pantone: #dde5ed;
 
   --bg-color: #f9f9f9;
   --color-red-very-dark: #760000;
@@ -23,6 +79,7 @@ input {
   --color-gray-light: #94999f;
   --color-blue-light: #4482bb;
   --color-blue-primary: #407ead;
+  --color-blue-brand: #0149fd;
   --bg-color-gray-light: #d8d8d8;
   --color-gray-medium: #a5a4a2;
 

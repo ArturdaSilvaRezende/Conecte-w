@@ -3,51 +3,32 @@
   grid-area: main;
 
   img {
-    height: 70vh;
-    width: 40%;
+    @apply object-contain;
+    height: 90vh;
+    margin-top: -40px;
+    width: 45%;
   }
 
   .login__contents {
-    @apply ml-32 pr-6 -mt-1.5 relative;
-    border-left: 1px solid var(--color-red-rgba);
-    border-bottom: 1px solid var(--color-red-rgba);
-    height: 375px;
+    @apply ml-12 pr-6 pt-5 -mt-1.5 relative;
+    border-left: 1px solid var(--blue);
+    border-bottom: 1px solid var(--blue);
+    height: 355px;
 
     &::after {
       @apply ml-auto block relative text-transparent;
       content: ".";
-      border-right: 1px solid var(--color-red-rgba);
+      border-right: 1px solid var(--blue);
       height: 45px;
       right: -24px;
-      top: -13px;
+      top: -24px;
     }
 
     .login__title {
       @apply mt-20 ml-6;
 
       h1 {
-        font-family: "Kanit", sans-serif;
-        @apply font-bold text-4xl;
-
-        span {
-          &:first-child {
-            @apply text-4xl;
-          }
-
-          &:last-child {
-            @apply text-2xl font-normal;
-            color: var(--color-gray-very-light);
-          }
-        }
-      }
-
-      p {
-        @apply uppercase;
-        color: var(--color-gray-light);
-
-        &:nth-child(3) {
-          @apply font-bold;
-        }
+        @apply font-bold text-3xl;
       }
     }
 
@@ -59,6 +40,7 @@
           @apply flex items-center;
           border: 1px solid var(--bg-color-gray-light);
           border-radius: 5px;
+          font-size: 12px;
 
           & + .login__input {
             @apply mt-2;
@@ -69,7 +51,7 @@
           }
 
           button {
-            @apply py-2 px-3;
+            @apply py-3 px-3;
             background-color: var(--bg-color-gray-light);
             border-radius: 5px 0 0 5px;
 
@@ -120,7 +102,7 @@
       &::after {
         @apply ml-auto block relative text-transparent rounded-full bg-white;
         content: ".";
-        border: 2px solid var(--color-red-rgba);
+        border: 2px solid var(--blue);
         height: 16px;
         width: 16px;
         right: -24px;
@@ -137,7 +119,7 @@
         @apply ml-auto block relative text-transparent rounded-full bg-white z-10;
         content: ".";
 
-        border: 2px solid var(--color-red-rgba);
+        border: 2px solid var(--blue);
         height: 16px;
         width: 16px;
         right: -22px;
@@ -153,7 +135,7 @@
       &::after {
         @apply ml-auto block relative text-transparent rounded-full z-10;
         content: ".";
-        background-color: var(--color-red-dark);
+        background-color: var(--blue);
         height: 16px;
         width: 16px;
         right: -22px;
@@ -171,12 +153,14 @@
     }
 
     .login__contents {
-      @apply ml-0 bg-red-400;
+      @apply ml-0;
 
+      background-color: var(--navy);
       box-shadow: 5px 5px 10px #333333, -5px -5px 10px #333333;
       border-radius: 10px;
       border-left: none;
       border-bottom: none;
+      height: 315px;
       min-width: 500px;
 
       &::after {
@@ -192,31 +176,9 @@
         @apply mt-3;
 
         h1 {
+          @apply mb-5;
+          @apply text-4xl text-white;
           text-shadow: 3px 3px 5px #333333;
-
-          span {
-            &:first-child {
-              @apply text-5xl text-white;
-            }
-            &:last-child {
-              @apply ml-0.5 text-2xl text-white;
-            }
-          }
-        }
-
-        p {
-          @apply text-white;
-          text-shadow: 1px 1px 5px #333333;
-
-          &:nth-child(2) {
-            @apply my-1;
-            font-size: 1.1rem;
-          }
-
-          &:nth-child(3) {
-            @apply font-semibold;
-            font-size: 1.2rem;
-          }
         }
       }
 
@@ -274,19 +236,18 @@
   }
 
   @media screen and (max-width: 767px) {
-    @apply flex-col justify-center items-center mb-44;
+    @apply flex-col justify-center items-center;
 
     img {
-      @apply object-cover;
-      height: 50vh;
+      height: 60vh;
+      margin-top: 200px;
       width: 100%;
     }
 
     .login__contents {
-      @apply ml-0 pr-0 mb-10 mt-3 w-11/12;
+      @apply ml-0 pr-0 mb-52 mt-3 w-11/12 h-auto;
       border-left: none;
       border-bottom: none;
-      height: auto;
 
       &::after {
         @apply hidden;
@@ -298,12 +259,12 @@
       }
 
       .login__title {
-        @apply mt-0 mb-5 text-center;
+        @apply mt-0 mb-2 text-left;
 
         h1 {
           span {
             &:first-child {
-              @apply text-4xl;
+              @apply text-3xl;
             }
           }
         }
@@ -317,6 +278,8 @@
       }
 
       .login__form {
+        @apply mb-5;
+
         .login__fields {
           .login__input {
             @apply p-2;

@@ -11,13 +11,14 @@
 
       .blogs__banner {
         @apply text-center relative mr-3;
-        background-color: #0059ff;
-        width: 34px;
+        background-color: var(--blue);
+        height: 60px;
+        max-width: 34px;
 
         span {
           @apply text-white absolute -translate-y-1/2 uppercase;
           font-size: 12px;
-          left: 2px;
+          left: 1px;
           top: 25px;
           transform: rotate(-90deg);
         }
@@ -34,7 +35,7 @@
           height: 0;
           border-left: 17px solid transparent;
           border-right: 17px solid transparent;
-          border-bottom: 20px solid #0059ff;
+          border-bottom: 20px solid var(--blue);
           color: transparent;
           transform: rotate(180deg);
         }

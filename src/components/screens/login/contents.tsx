@@ -2,7 +2,6 @@ import Image from "next/image";
 import { MdHealthAndSafety } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { KanitBlack } from "@/fonts/index";
 import LoginImageBg from "/public/assets/images/login/login-img-bg.png";
 import styles from "@/styles/login/_Contents.module.scss";
 
@@ -12,19 +11,14 @@ export default function LoginContents() {
       <Image
         src={LoginImageBg}
         alt="Imagem de fundo / tela de login"
-        width={300}
-        height={300}
+        width={700}
+        height={700}
         priority
       />
 
       <div className={styles.login__contents}>
         <div className={styles.login__title}>
-          <h1>
-            <span className={KanitBlack.className}>conecte</span>
-            <span>/w</span>
-          </h1>
-          <p>Conectando Respostas</p>
-          <p>Simplificando Processos</p>
+          <h1>HMO CHAMADOS</h1>
         </div>
 
         <form className={styles.login__form}>
@@ -33,19 +27,19 @@ export default function LoginContents() {
               <button>
                 <MdHealthAndSafety />
               </button>
-              <input type="text" />
+              <input type="text" placeholder="Código do cliente" />
             </div>
             <div className={styles.login__input}>
               <button>
                 <FaUser />
               </button>
-              <input type="text" />
+              <input type="text" placeholder="Usuário ou E-mail" />
             </div>
             <div className={styles.login__input}>
               <button>
                 <RiLockPasswordFill />
               </button>
-              <input type="text" />
+              <input type="password" placeholder="****" />
             </div>
           </div>
           <div className={styles.login__submit}>

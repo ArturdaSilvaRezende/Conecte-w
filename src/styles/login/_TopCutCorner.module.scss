@@ -13,7 +13,7 @@
         position: relative;
         top: -24px;
         left: 0;
-        border-bottom: 15px solid var(--color-red-very-dark);
+        border-bottom: 15px solid var(--navy-pantone);
         border-right: 30px solid transparent;
         color: transparent;
       }
@@ -26,7 +26,7 @@
         position: relative;
         top: 0;
         left: -31px;
-        border-bottom: 15px solid var(--color-red-dark);
+        border-bottom: 15px solid var(--blue-pantone);
         border-right: 30px solid transparent;
         transform: rotate(180deg);
         color: transparent;
@@ -41,7 +41,7 @@
         content: ".";
         position: relative;
         top: 0;
-        border-bottom: 15px solid var(--color-red-primary);
+        border-bottom: 15px solid var(--blue);
         border-right: 30px solid transparent;
         margin-left: -60px;
         transform: rotate(180deg);

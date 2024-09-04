@@ -13,4 +13,8 @@
     background-position: center 20px;
     height: 100vh;
   }
+
+  @media screen and (max-width: 767px) {
+    grid-template-rows: 1fr minmax(560px, 90vh) 1fr;
+  }
 }
